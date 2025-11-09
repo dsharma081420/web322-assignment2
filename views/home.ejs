@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="mytheme">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoSolutions - Climate Action Hub</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <style>
+        body {
+            background: linear-gradient(135deg, #f5f5dc 0%, #e8e8d0 100%);
+            min-height: 100vh;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #2d5016 0%, #4a7c24 100%);
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(45, 80, 22, 0.3);
+        }
+        .wave-divider {
+            position: relative;
+            background: #f5f5dc;
+            padding-top: 50px;
+        }
+        .wave-divider::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z' fill='%234a7c24'/%3E%3C/svg%3E") no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <%- include('partials/navbar', {page: '/'}) %>
+
+ 
+    <div class="hero hero-gradient min-h-[70vh] relative overflow-hidden">
+        
+        <div class="absolute top-10 right-10 w-64 h-64 bg-mint opacity-20 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-10 left-10 w-80 h-80 bg-leaf-green opacity-20 rounded-full blur-3xl"></div>
+        
+        <div class="hero-content text-center relative z-10">
+            <div class="max-w-3xl">
+                <div class="mb-8">
+                    <span class="text-6xl">🌍</span>
+                </div>
+                <h1 class="text-6xl font-extrabold text-cream mb-4 drop-shadow-lg">
+                    Explore Climate Solutions
+                </h1>
+                <p class="text-xl text-mint mb-8 font-medium">
+                    Discover innovative projects and initiatives combating climate change across various sectors. 
+                    Together, we can build a sustainable future for our planet.
+                </p>
+                <div class="flex gap-4 justify-center flex-wrap">
+                    <a href="/solutions/projects" class="btn btn-lg bg-mint text-forest-green border-none hover:bg-cream hover:scale-105 transition-transform">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                        </svg>
+                        View All Projects
+                    </a>
+                    <a href="/about" class="btn btn-lg btn-outline text-cream border-cream hover:bg-cream hover:text-forest-green hover:scale-105 transition-transform">
+                        Learn More About Us
+                    </a>
+                </div>
+
+                
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-mint/30">
+                        <div class="text-4xl font-bold text-mint">30+</div>
+                        <div class="text-cream mt-2">Climate Projects</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-mint/30">
+                        <div class="text-4xl font-bold text-mint">5</div>
+                        <div class="text-cream mt-2">Key Sectors</div>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-mint/30">
+                        <div class="text-4xl font-bold text-mint">100%</div>
+                        <div class="text-cream mt-2">Impact Focused</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+    <div class="wave-divider">
+        <div class="container mx-auto px-4 py-16">
+          
+            <div class="text-center mb-12">
+                <h2 class="text-5xl font-bold text-forest-green mb-4">Featured Projects</h2>
+                <p class="text-xl text-earth-brown max-w-2xl mx-auto">
+                    Explore our hand-picked selection of groundbreaking climate solutions making a real difference
+                </p>
+                <div class="mt-4 flex justify-center">
+                    <div class="w-24 h-1 bg-leaf-green rounded-full"></div>
+                </div>
+            </div>
+
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="card bg-white shadow-2xl card-hover border-t-4 border-leaf-green">
+                    <figure class="relative h-56 overflow-hidden">
+                        <img src="https://drawdown.org/sites/default/files/solutions/solution_farmlandrestoration01.jpg" alt="Farmland Restoration" class="w-full h-full object-cover" />
+                        <div class="absolute top-4 left-4 badge badge-lg bg-leaf-green text-white border-none">
+                            🌱 Land Sinks
+                        </div>
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title text-forest-green text-2xl">
+                            Abandoned Farmland Restoration
+                        </h2>
+                        <p class="text-earth-brown">
+                            Restoration can bring degraded farmland back into productivity and sequester carbon in the process.
+                        </p>
+                        <div class="divider"></div>
+                        <div class="card-actions justify-between items-center">
+                            <div class="flex gap-2">
+                                <div class="badge badge-outline text-leaf-green border-leaf-green">Sequestration</div>
+                            </div>
+                            <a href="/solutions/projects/1" class="btn btn-sm bg-leaf-green text-white border-none hover:bg-forest-green">
+                                Discover More →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="card bg-white shadow-2xl card-hover border-t-4 border-leaf-green">
+                    <figure class="relative h-56 overflow-hidden">
+                        <img src="https://drawdown.org/sites/default/files/solutions2020/solution_alternativecement02.jpg" alt="Alternative Cement" class="w-full h-full object-cover" />
+                        <div class="absolute top-4 left-4 badge badge-lg bg-leaf-green text-white border-none">
+                            🏭 Industry
+                        </div>
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title text-forest-green text-2xl">
+                            Alternative Cement
+                        </h2>
+                        <p class="text-earth-brown">
+                            Conventional cement production is a significant source of carbon dioxide. Reformulation can reduce emissions by millions of metric tons.
+                        </p>
+                        <div class="divider"></div>
+                        <div class="card-actions justify-between items-center">
+                            <div class="flex gap-2">
+                                <div class="badge badge-outline text-leaf-green border-leaf-green">Innovation</div>
+                            </div>
+                            <a href="/solutions/projects/2" class="btn btn-sm bg-leaf-green text-white border-none hover:bg-forest-green">
+                                Discover More →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="card bg-white shadow-2xl card-hover border-t-4 border-leaf-green">
+                    <figure class="relative h-56 overflow-hidden">
+                        <img src="https://drawdown.org/sites/default/files/solutions2020/solution_bicycle_infrastructure.jpg" alt="Bicycle Infrastructure" class="w-full h-full object-cover" />
+                        <div class="absolute top-4 left-4 badge badge-lg bg-leaf-green text-white border-none">
+                            🚲 Transportation
+                        </div>
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title text-forest-green text-2xl">
+                            Bicycle Infrastructure
+                        </h2>
+                        <p class="text-earth-brown">
+                            Infrastructure is essential for supporting safe and abundant bicycle use, which curbs emissions by reducing fossil-fuel-dependent transportation.
+                        </p>
+                        <div class="divider"></div>
+                        <div class="card-actions justify-between items-center">
+                            <div class="flex gap-2">
+                                <div class="badge badge-outline text-leaf-green border-leaf-green">Urban</div>
+                            </div>
+                            <a href="/solutions/projects/3" class="btn btn-sm bg-leaf-green text-white border-none hover:bg-forest-green">
+                                Discover More →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="mt-16 bg-gradient-to-r from-forest-green to-leaf-green rounded-3xl p-12 text-center shadow-2xl">
+                <h3 class="text-4xl font-bold text-cream mb-4">Ready to Make a Difference?</h3>
+                <p class="text-xl text-mint mb-8 max-w-2xl mx-auto">
+                    Join us in exploring sustainable solutions and be part of the global climate action movement
+                </p>
+                <a href="/solutions/projects" class="btn btn-lg bg-mint text-forest-green border-none hover:bg-cream hover:scale-105 transition-transform">
+                    Explore All Solutions
+                </a>
+            </div>
+        </div>
+    </div>
+
+    
+    <footer class="footer footer-center p-10 bg-forest-green text-cream mt-16">
+        <div>
+            <div class="text-4xl mb-4">🌿</div>
+            <p class="font-bold text-2xl">
+                EcoSolutions
+            </p> 
+            <p class="text-mint">Building a sustainable future, one project at a time</p>
+        </div> 
+        <div>
+            <p>Copyright © 2025 - All rights reserved by EcoSolutions</p>
+        </div>
+    </footer>
+</body>
+</html>
